@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default('OCR - App') }}</title>
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+
+    {% block head_content %} {% endblock %}
+</head>
+
+<header class="header">
+    <div class="nav-container">
+        <a href="{{ url_for('index') }}" class="header__logo">
+            <span class="logo__name">OCR - App</span>
+        </a>
+    </div>
+</header>
+
+<body>
+    {% block main_content %} {% endblock %}
+</body>
+
+</html>
